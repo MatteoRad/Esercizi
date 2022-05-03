@@ -8,7 +8,7 @@ struct Libro
     float prezzo;
 };
 
-void inseriscilibro(Libro libro[])
+int inseriscilibro(Libro libro[])
 {
     int n;
     cout<<"inserisci il numero di libri"<<endl;
@@ -29,11 +29,21 @@ void inseriscilibro(Libro libro[])
         cout<<"inserisci il prezzo"<<endl;
         cin>>libro[i].prezzo;
     }
+    return 0;
 }
 
 void catalogo(Libro libro[], int n)
 {
-    
+    for(int i = 0; i < n; i++)
+    {
+        cout<<endl;
+        cout<<"ISBN"<<libro[i].ISBN;
+        cout<<"titolo"<<libro[i].titolo;
+        cout<<"Autore"<<libro[i].Autore;
+        cout<<"Editore"<<libro[i].Editore;
+        cout<<"Anno"<<libro[i].anno;
+        cout<<"Prezzo"<<libro[i].prezzo;
+    }
 }
 
 void cancella_libro(Libro libro[], int n)
@@ -41,14 +51,63 @@ void cancella_libro(Libro libro[], int n)
     
 }
 
-void ricerca_libro()
+void ricerca_libro(Libro libro[], int n)
 {
     
 }
 
-void modifiche()
+void modifiche(Libro libro[], int n)
 {
     
+}
+
+void menu(Libro libro[], int n)
+{
+    int scelta;
+    do
+    {
+        cout<<"MENU'"<<endl;
+        cout<<"1) Inserire un nuovo libro"<<endl;
+        cout<<"2) Visualizzare l’intero catalogo della biblioteca"<<endl;
+        cout<<"3) Cancellare un libro"<<endl;
+        cout<<"4) Ricercare un particolare libro"<<endl;
+        cout<<"5) Effettuare delle modifiche"<<endl;
+        cout<<"6) Uscita"<<endl;
+        cin>>scelta;
+        
+        if(scelta==1)
+        {
+            cout<<endl;
+            n = inseriscilibro(libro);
+            cout<<endl;
+        }
+        else if(scelta==2)
+        {
+            cout<<endl;
+            catalogo(libro, n);
+            cout<<endl;
+        }
+        else if(scelta==3)
+        {
+            cout<<endl;
+            cancella_libro(libro, n);
+            cout<<endl;
+        }
+        else if(scelta==4)
+        {
+            cout<<endl;
+            ricerca_libro(libro, n);
+            cout<<endl;
+        }
+        else if(scelta==5)
+        {
+            cout<<endl;
+            modifiche(libro, n);
+            cout<<endl;
+        }
+    }
+    while(scelta<6);
+    cout<<"Esco..."<<endl;
 }
 
 int main()
