@@ -1,18 +1,34 @@
-//1) inizializzazione progetto git
-//2) creazione della struttura
-
-
 #include <iostream>
 using namespace std;
 
 struct Libro
 {
-    
+    string ISBN, titolo, Autore, Editore;
+    int anno;
+    float prezzo;
 };
 
-int inseriscilibro(Libro libro[])
+void inseriscilibro(Libro libro[])
 {
-    return 0;
+    int n;
+    cout<<"inserisci il numero di libri"<<endl;
+    cin>>n;
+    
+    for(int i = 0; i < n; i++)
+    {
+        cout<<"inserisci il codice ISBN"<<endl;
+        cin>>libro[i].ISBN;
+        cout<<"inserisci il titolo"<<endl;
+        cin>>libro[i].titolo;
+        cout<<"inserisci l'autore"<<endl;
+        cin>>libro[i].Autore;
+        cout<<"inserisci l'editore"<<endl;
+        cin>>libro[i].Editore;
+        cout<<"inserisci l'anno'"<<endl;
+        cin>>libro[i].anno;
+        cout<<"inserisci il prezzo"<<endl;
+        cin>>libro[i].prezzo;
+    }
 }
 
 void catalogo(Libro libro[], int n)
