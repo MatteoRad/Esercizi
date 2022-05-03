@@ -112,5 +112,10 @@ void menu(Libro libro[], int n)
 
 int main()
 {
+    int n=0;
+    Libro libro[50];
+    
+    menu(libro, n);
+    
     return 0;
 }
