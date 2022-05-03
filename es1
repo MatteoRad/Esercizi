@@ -1,3 +1,41 @@
+//1) inizializzazione progetto git
+//2) creazione della struttura
+
+
 #include <iostream>
 using namespace std;
-//inizializzazione progetto git
+
+struct Libro
+{
+    
+};
+
+int inseriscilibro(Libro libro[])
+{
+    return 0;
+}
+
+void catalogo(Libro libro[], int n)
+{
+    
+}
+
+void cancella_libro(Libro libro[], int n)
+{
+    
+}
+
+void ricerca_libro()
+{
+    
+}
+
+void modifiche()
+{
+    
+}
+
+int main()
+{
+    return 0;
+}
