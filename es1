@@ -11,7 +11,7 @@ struct Libro
 int inseriscilibro(Libro libro[])
 {
     int n;
-    cout<<"inserisci il numero di libri"<<endl;
+    cout<<"Quanti libri vuoi inserire ? "<<endl;
     cin>>n;
     
     for(int i = 0; i < n; i++)
@@ -50,7 +50,20 @@ void catalogo(Libro libro[], int n)
 
 void cancella_libro(Libro libro[], int n)
 {
+    string elimina;
+    cout<<"Inserisci il codice del libro da eliminare : "<<endl;
+    cin>>elimina;
     
+    int i=0;
+    if(elimina==libro[i].ISBN)
+    {
+        libro[i].ISBN=" ";
+        libro[i].titolo=" ";
+        libro[i].Autore=" ";
+        libro[i].Editore=" ";
+        libro[i].anno=0;
+        libro[i].prezzo=0;
+    }
 }
 
 void ricerca_libro(Libro libro[], int n)
