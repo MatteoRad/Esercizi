@@ -28,6 +28,8 @@ int inseriscilibro(Libro libro[])
         cin>>libro[i].anno;
         cout<<"inserisci il prezzo del libro "<<i+1<<endl;
         cin>>libro[i].prezzo;
+        cout<<endl;
+        cout<<endl;
     }
     return n;
 }
@@ -75,7 +77,26 @@ void ricerca_libro(Libro libro[], int n)
 
 void modifiche(Libro libro[], int n)
 {
+    string m;
+    cout<<"Inserisci il codice del libro che si vuole modificare : "<<endl;
+    cin>>m;
     
+    int i=0;
+    if(libro[i].ISBN==m)
+    {
+        cout<<"Modifica del' ISBN : "<<endl;
+        cin>>libro[i].ISBN;
+        cout<<"Modifica del titolo : "<<endl;
+        cin>>libro[i].titolo;
+        cout<<"Modifica dell' Autore : "<<endl;
+        cin>>libro[i].Autore;
+        cout<<"Modifica dell' Editore : "<<endl;
+        cin>>libro[i].Editore;
+        cout<<"Modifica dell' anno"<<endl;
+        cin>>libro[i].anno;
+        cout<<"Modifica del prezzo"<<endl;
+        cin>>libro[i].prezzo;
+    }
 }
 
 void menu(Libro libro[], int n)
