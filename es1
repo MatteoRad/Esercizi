@@ -64,6 +64,10 @@ void cancella_libro(Libro libro[], int n)
         libro[i].anno=0;
         libro[i].prezzo=0;
     }
+    else
+    {
+        cout<<"Il libro non e' stato trovato!"<<endl;
+    }
 }
 
 void ricerca_libro(Libro libro[], int n)
@@ -85,6 +89,10 @@ void ricerca_libro(Libro libro[], int n)
             cout<<"Anno : "<<libro[i].anno<<endl;
             cout<<"Prezzo : "<<libro[i].prezzo<<endl;
         }
+    }
+    else
+    {
+        cout<<"Il libro non e' stato trovato!"<<endl;
     }
 }
 
@@ -109,6 +117,10 @@ void modifiche(Libro libro[], int n)
         cin>>libro[i].anno;
         cout<<"Modifica del prezzo"<<endl;
         cin>>libro[i].prezzo;
+    }
+    else
+    {
+        cout<<"Il libro non e' stato trovato!"<<endl;
     }
 }
 
