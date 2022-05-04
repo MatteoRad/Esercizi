@@ -16,20 +16,20 @@ int inseriscilibro(Libro libro[])
     
     for(int i = 0; i < n; i++)
     {
-        cout<<"inserisci il codice ISBN"<<endl;
+        cout<<"inserisci il codice ISBN del libro "<<i+1<<endl;
         cin>>libro[i].ISBN;
-        cout<<"inserisci il titolo"<<endl;
+        cout<<"inserisci il titolo del libro "<<i+1<<endl;
         cin>>libro[i].titolo;
-        cout<<"inserisci l'autore"<<endl;
+        cout<<"inserisci l'autore del libro "<<i+1<<endl;
         cin>>libro[i].Autore;
-        cout<<"inserisci l'editore"<<endl;
+        cout<<"inserisci l'editore del libro "<<i+1<<endl;
         cin>>libro[i].Editore;
-        cout<<"inserisci l'anno'"<<endl;
+        cout<<"inserisci l'anno del libro "<<i+1<<endl;
         cin>>libro[i].anno;
-        cout<<"inserisci il prezzo"<<endl;
+        cout<<"inserisci il prezzo del libro "<<i+1<<endl;
         cin>>libro[i].prezzo;
     }
-    return 0;
+    return n;
 }
 
 void catalogo(Libro libro[], int n)
@@ -37,12 +37,12 @@ void catalogo(Libro libro[], int n)
     for(int i = 0; i < n; i++)
     {
         cout<<endl;
-        cout<<"ISBN"<<libro[i].ISBN;
-        cout<<"titolo"<<libro[i].titolo;
-        cout<<"Autore"<<libro[i].Autore;
-        cout<<"Editore"<<libro[i].Editore;
-        cout<<"Anno"<<libro[i].anno;
-        cout<<"Prezzo"<<libro[i].prezzo;
+        cout<<"ISBN : "<<libro[i].ISBN<<endl;
+        cout<<"titolo : "<<libro[i].titolo<<endl;
+        cout<<"Autore : "<<libro[i].Autore<<endl;
+        cout<<"Editore : "<<libro[i].Editore<<endl;
+        cout<<"Anno : "<<libro[i].anno<<endl;
+        cout<<"Prezzo : "<<libro[i].prezzo<<endl;
     }
 }
 
@@ -53,7 +53,24 @@ void cancella_libro(Libro libro[], int n)
 
 void ricerca_libro(Libro libro[], int n)
 {
+    string ricerca;
+    cout<<"Inserire il codice : "<<endl;
+    cin>>ricerca;
     
+    int i=0;
+    if(ricerca == libro[i].ISBN)
+    {
+        for(int i=0; i<n; i++)
+        {
+            cout<<"Il libro cercato e' : "<<endl;
+            cout<<"ISBN : "<<libro[i].ISBN<<endl;
+            cout<<"titolo : "<<libro[i].titolo<<endl;
+            cout<<"Autore : "<<libro[i].Autore<<endl;
+            cout<<"Editore : "<<libro[i].Editore<<endl;
+            cout<<"Anno : "<<libro[i].anno<<endl;
+            cout<<"Prezzo : "<<libro[i].prezzo<<endl;
+        }
+    }
 }
 
 void modifiche(Libro libro[], int n)
